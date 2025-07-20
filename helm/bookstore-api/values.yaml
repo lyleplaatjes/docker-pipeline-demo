@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: <your-docker-username>/bookstore-api
+  repository: lyleplaatjes/bookstore-api
   tag: latest
   pullPolicy: IfNotPresent
 
