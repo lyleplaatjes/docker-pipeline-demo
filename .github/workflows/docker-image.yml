@@ -26,10 +26,11 @@ jobs:
         uses: docker/setup-buildx-action@v2
 
       # Step 4: Build & Push the Docker Image
-      - name: Build and push Docker image
+      - name: Build and push multi-arch Docker image
         uses: docker/build-push-action@v4
         with:
           push: true
+          platforms: linux/amd64, linux/arm64
           tags: ${{ secrets.DOCKER_USERNAME }}/bookstore-api:latest
 
       # Step 5: (Optional) Output image details
