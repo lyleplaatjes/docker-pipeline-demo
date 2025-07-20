@@ -1,0 +1,49 @@
+# ---- Python ----
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.pkl
+*.egg-info/
+*.egg
+.Python
+
+# ---- Virtual Environments ----
+.env
+.venv/
+venv/
+env/
+
+# ---- Databases ----
+*.db
+*.sqlite3
+
+# ---- Logs ----
+*.log
+logs/
+
+# ---- Docker ----
+.dockerignore
+docker-compose.override.yml
+
+# ---- Git ----
+.git
+.gitignore
+
+# ---- IDEs & Editors ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- Test & Coverage ----
+htmlcov/
+.tox/
+.coverage
+.pytest_cache/
+.mypy_cache/
+.cache/
+
+# ---- Misc ----
+*.DS_Store

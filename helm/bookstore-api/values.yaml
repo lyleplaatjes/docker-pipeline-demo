@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: <your-docker-username>/bookstore-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8080
+
+ingress:
+  enabled: true
+  className: nginx
+  hosts:
+    - host: bookstore.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+env:
+  DATABASE_URL: "sqlite:///./books.db"
+  LOG_LEVEL: "INFO"
+  APP_ENV: "dev"
+
+resources: {}
