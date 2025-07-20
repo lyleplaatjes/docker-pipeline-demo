@@ -14,3 +14,18 @@
 | `ALLOWED_ORIGINS` | `*`                                      | Comma-separated list for CORS allowed origins (`*` = all).      |
 | `DB_POOL_SIZE`    | `5`                                      | SQLAlchemy connection-pool size.                                |
 | `DB_MAX_OVERFLOW` | `10`                                     | SQLAlchemy max overflow connections beyond the pool size.       |
+
+In order to build the Docker image using the included Dockerfile:
+Please make sure that you have Docker installed locally on your machine.
+
+Build the Docker Image:
+docker build -t bookstore-api .
+Run the container locally with default config:
+docker run -p 8080:8080 bookstore-api
+
+Testing
+The API will be available at:
+http://localhost:8080
+
+Interactive API docs:
+http://localhost:8080/docs
